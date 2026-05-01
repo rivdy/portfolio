@@ -1,65 +1,106 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-black text-white px-6 md:px-20 py-16">
+
+      {/* HERO */}
+      <section className="text-center mt-10">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          Rivaldy Putra Rivly
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-400">
+          AI & Data Science Enthusiast | Building Scalable Tech for Education
+        </p>
+        <p className="mt-2 text-sm text-gray-500">
+          Universitas Indonesia • ETH Zurich Research • Samsung SFT 🥈
+        </p>
+      </section>
+
+      {/* ABOUT */}
+      <section className="mt-24 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-semibold border-b border-gray-700 pb-2">
+          About Me
+        </h2>
+        <p className="mt-4 text-gray-300 leading-relaxed">
+          I am an Information Systems student at Universitas Indonesia with a strong
+          interest in Artificial Intelligence, Data Science, and Education Technology.
+          I have worked on international research projects and built impactful digital
+          solutions used by students across Indonesia.
+        </p>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="mt-24 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-semibold border-b border-gray-700 pb-2">
+          Projects
+        </h2>
+
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+
+          <div className="p-5 border border-gray-800 rounded-xl hover:border-gray-500 transition">
+            <h3 className="text-lg font-semibold">
+              Keyword RGB
+            </h3>
+            <p className="text-sm text-gray-400 mt-2">
+              AI-based learning platform with gamification. 2nd Place Samsung Solve for Tomorrow.
+            </p>
+          </div>
+
+          <div className="p-5 border border-gray-800 rounded-xl hover:border-gray-500 transition">
+            <h3 className="text-lg font-semibold">
+              AI Contact Prediction
+            </h3>
+            <p className="text-sm text-gray-400 mt-2">
+              Deep learning model to predict human-object interaction (ETH Zurich).
+            </p>
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section className="mt-24 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-semibold border-b border-gray-700 pb-2">
+          Experience
+        </h2>
+
+        <ul className="mt-6 space-y-4 text-gray-300">
+          <li>
+            <strong>Product Development Intern</strong> – IEG (USA)
+          </li>
+          <li>
+            <strong>SAT Tutor</strong> – Kobi Education
+          </li>
+          <li>
+            <strong>Project Manager Trainee</strong> – BEM Fasilkom UI
+          </li>
+        </ul>
+      </section>
+
+      {/* SKILLS */}
+      <section className="mt-24 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-semibold border-b border-gray-700 pb-2">
+          Skills
+        </h2>
+
+        <div className="mt-6 flex flex-wrap gap-3 text-sm">
+          {["Python", "JavaScript", "SQL", "Machine Learning", "Next.js", "Tailwind", "Flutter"].map((skill) => (
+            <span key={skill} className="px-3 py-1 bg-gray-800 rounded-full">
+              {skill}
+            </span>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="mt-24 text-center">
+        <h2 className="text-2xl font-semibold">
+          Contact
+        </h2>
+        <p className="mt-4 text-gray-400">
+          rivaldy.rivly@gmail.com
+        </p>
+      </section>
+
+    </main>
   );
 }

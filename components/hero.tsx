@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { stats } from "@/data/site";
 
@@ -58,21 +58,19 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-300">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/rivaldy-putra-r-80ba0b236/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:bg-white/10"
             >
-              <Linkedin size={16} />
               LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/rivdy"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:bg-white/10"
             >
-              <Github size={16} />
               GitHub
             </a>
           </div>
@@ -139,7 +137,9 @@ export default function Hero() {
                     className="rounded-3xl border border-white/10 bg-white/5 px-4 py-4"
                   >
                     <p className="text-2xl font-semibold text-white">{item.value}</p>
-                    <p className="mt-1 text-xs leading-5 text-slate-400">{item.label}</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-400">
+                      {item.label}
+                    </p>
                   </div>
                 ))}
               </div>

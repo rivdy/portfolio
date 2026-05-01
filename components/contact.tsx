@@ -1,13 +1,15 @@
-// src/components/contact.tsx
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Linkedin, Github } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import SectionHeading from "@/components/section-heading";
 
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto w-full max-w-7xl px-4 py-16 pb-24 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="mx-auto w-full max-w-7xl px-4 py-16 pb-24 sm:px-6 lg:px-8"
+    >
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 18 }}
@@ -42,22 +44,22 @@ export default function Contact() {
                 <Mail size={16} />
                 Email
               </a>
+
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/rivaldy-putra-r-80ba0b236/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                <Linkedin size={16} />
                 LinkedIn
               </a>
+
               <a
-                href="https://github.com/"
+                href="https://github.com/rivdy"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
-                <Github size={16} />
                 GitHub
               </a>
             </div>
@@ -69,7 +71,9 @@ export default function Contact() {
             </p>
 
             <div className="mt-4 rounded-[1.75rem] border border-cyan-400/15 bg-cyan-400/10 p-5">
-              <p className="text-sm font-medium text-white">Rivaldy Putra Rivly</p>
+              <p className="text-sm font-medium text-white">
+                Rivaldy Putra Rivly
+              </p>
               <p className="mt-2 text-sm leading-7 text-slate-300">
                 AI • Data Science • Bioinformatics-inspired Portfolio
               </p>
